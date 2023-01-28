@@ -18,11 +18,10 @@ let driver = new Builder().forBrowser('firefox').setFirefoxOptions(options).buil
      
      
 //add a todo
-      await driver.findElement(By.id('sampletodotext')).sendKeys("Escandalosos",Key.RETURN);
-      await driver.findElement(By.id('sampletodotext')).sendKeys("Escandalosos1",Key.RETURN);
-      await driver.findElement(By.id('sampletodotext')).sendKeys("Escandalosos2",Key.RETURN);
-      await driver.findElement(By.id('sampletodotext')).sendKeys("Escandalosos3",Key.RETURN);
-      await driver.findElement(By.id('sampletodotext')).sendKeys("Escandalosos4",Key.RETURN);
+      for (i=0; i <10; i++){
+        await driver.findElement(By.id('sampletodotext')).sendKeys("ITEM"+i,Key.RETURN);
+      }
+      
     };
 
   example();
