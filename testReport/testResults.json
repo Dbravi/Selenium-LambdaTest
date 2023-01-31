@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-01-30T23:28:25.320Z",
-    "end": "2023-01-30T23:28:33.467Z",
-    "duration": 8147,
+    "start": "2023-01-31T01:33:53.854Z",
+    "end": "2023-01-31T01:34:02.266Z",
+    "duration": 8412,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,19 +18,19 @@
   },
   "results": [
     {
-      "uuid": "181dce5d-d999-48fa-95cb-a5069e6bc07d",
+      "uuid": "862164cd-7240-44e6-a489-a21542b40b95",
       "title": "",
-      "fullFile": "C:\\Users\\Dex\\Programación\\Projects\\Selenium\\test\\test 4.js",
-      "file": "\\test\\test 4.js",
+      "fullFile": "C:\\Users\\Dex\\Programación\\Projects\\Selenium\\test\\GoogleChallenge.js",
+      "file": "\\test\\GoogleChallenge.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "30cfb057-9f55-4309-9562-e9e34fc29053",
+          "uuid": "9c2b6fda-b045-41f9-9dc4-cea034422c81",
           "title": "Login test",
-          "fullFile": "C:\\Users\\Dex\\Programación\\Projects\\Selenium\\test\\test 4.js",
-          "file": "\\test\\test 4.js",
+          "fullFile": "C:\\Users\\Dex\\Programación\\Projects\\Selenium\\test\\GoogleChallenge.js",
+          "file": "\\test\\GoogleChallenge.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
@@ -38,16 +38,16 @@
               "title": "Checking login to application:",
               "fullTitle": "Login test Checking login to application:",
               "timedOut": null,
-              "duration": 7479,
+              "duration": 7804,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "let driver = new Builder().forBrowser('firefox').setFirefoxOptions(options).build();\n    driver.manage().window().maximize();\n    await driver.get('https://demo.guru99.com/test/newtours/login.php');\n    await driver.findElement(By.xpath(\"//input[@name='userName']\")).sendKeys(\"asd\");\n    await driver.findElement(By.xpath(\"//input[@name='password']\")).sendKeys(\"asd\");\n    await driver.findElement(By.xpath(\"//input[@name='submit']\")).click();\n    let url = await driver.getCurrentUrl().then(function (value) {\n      return value\n    });\n    url.should.equal(\"https://demo.guru99.com/test/newtours/login_sucess.php\");\n    \n    driver.get(\"http://127.0.0.1:5500/testReport/testResults.html\");",
+              "code": "let driver = new Builder().forBrowser('firefox').setFirefoxOptions(options).build();\n    driver.manage().window().maximize();\n    await driver.get('https://www.google.com/');\n    await driver.findElement(By.xpath(\"//input[@title='Buscar']\")).sendKeys(\"cheese\");\n    await driver.findElement(By.xpath(\"//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']\")).click();\n    let searchResult = await driver.findElement(By.className('LC20lb MBeuO DKV0Md')).getText().then(function (value) {\n      return value\n    });\n    \n    searchResult.should.contain(\"cheese\");\n    \n    await driver.quit();",
               "err": {},
-              "uuid": "ac204ecb-e715-4681-9cce-b3f788780f38",
+              "uuid": "79e38783-254a-44f7-8bc4-2139fa747bda",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -55,12 +55,12 @@
           ],
           "suites": [],
           "passes": [
-            "ac204ecb-e715-4681-9cce-b3f788780f38"
+            "79e38783-254a-44f7-8bc4-2139fa747bda"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7479,
+          "duration": 7804,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
